@@ -1,0 +1,455 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		254D75F2064C27FE1A336273 /* libPods-ReduxObjc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78190522FBE436CC3825CB17 /* libPods-ReduxObjc.a */; };
+		76B393B91E4B2A5D0097D8E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B393B81E4B2A5D0097D8E6 /* main.m */; };
+		76B393BC1E4B2A5D0097D8E6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B393BB1E4B2A5D0097D8E6 /* AppDelegate.m */; };
+		76B393C41E4B2A5D0097D8E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76B393C31E4B2A5D0097D8E6 /* Assets.xcassets */; };
+		76B393C71E4B2A5D0097D8E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76B393C51E4B2A5D0097D8E6 /* LaunchScreen.storyboard */; };
+		76B393D31E4B2BD20097D8E6 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B393D21E4B2BD20097D8E6 /* MainViewController.m */; };
+		76B393D61E4B2D5F0097D8E6 /* MainViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B393D51E4B2D5F0097D8E6 /* MainViewModel.m */; };
+		76B393D91E4B2D7C0097D8E6 /* MainTableViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B393D81E4B2D7C0097D8E6 /* MainTableViewItem.m */; };
+		76B393DC1E4C04910097D8E6 /* NumberGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B393DB1E4C04910097D8E6 /* NumberGenerator.m */; };
+		76B393DF1E4C05460097D8E6 /* GeneratorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B393DE1E4C05460097D8E6 /* GeneratorManager.m */; };
+		76B393E21E4C156E0097D8E6 /* Action.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B393E11E4C156E0097D8E6 /* Action.m */; };
+		76B393E51E4C17080097D8E6 /* Reducer.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B393E41E4C17080097D8E6 /* Reducer.m */; };
+		76B393E81E4C17310097D8E6 /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B393E71E4C17310097D8E6 /* Store.m */; };
+		76B393EB1E4C17890097D8E6 /* State.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B393EA1E4C17890097D8E6 /* State.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		56AE752A03BEA9A2A1A37D94 /* Pods-ReduxObjc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReduxObjc.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReduxObjc/Pods-ReduxObjc.release.xcconfig"; sourceTree = "<group>"; };
+		76B393B41E4B2A5D0097D8E6 /* ReduxObjc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReduxObjc.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		76B393B81E4B2A5D0097D8E6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		76B393BA1E4B2A5D0097D8E6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		76B393BB1E4B2A5D0097D8E6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		76B393C31E4B2A5D0097D8E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		76B393C61E4B2A5D0097D8E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		76B393C81E4B2A5D0097D8E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76B393D11E4B2BD20097D8E6 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = UI/MainViewController.h; sourceTree = "<group>"; };
+		76B393D21E4B2BD20097D8E6 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = UI/MainViewController.m; sourceTree = "<group>"; };
+		76B393D41E4B2D5F0097D8E6 /* MainViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewModel.h; path = UI/MainViewModel.h; sourceTree = "<group>"; };
+		76B393D51E4B2D5F0097D8E6 /* MainViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewModel.m; path = UI/MainViewModel.m; sourceTree = "<group>"; };
+		76B393D71E4B2D7C0097D8E6 /* MainTableViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainTableViewItem.h; path = UI/MainTableViewItem.h; sourceTree = "<group>"; };
+		76B393D81E4B2D7C0097D8E6 /* MainTableViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainTableViewItem.m; path = UI/MainTableViewItem.m; sourceTree = "<group>"; };
+		76B393DA1E4C04910097D8E6 /* NumberGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NumberGenerator.h; path = Data/NumberGenerator.h; sourceTree = "<group>"; };
+		76B393DB1E4C04910097D8E6 /* NumberGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NumberGenerator.m; path = Data/NumberGenerator.m; sourceTree = "<group>"; };
+		76B393DD1E4C05460097D8E6 /* GeneratorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeneratorManager.h; path = Service/GeneratorManager.h; sourceTree = "<group>"; };
+		76B393DE1E4C05460097D8E6 /* GeneratorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GeneratorManager.m; path = Service/GeneratorManager.m; sourceTree = "<group>"; };
+		76B393E01E4C156E0097D8E6 /* Action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Action.h; path = Service/Action.h; sourceTree = "<group>"; };
+		76B393E11E4C156E0097D8E6 /* Action.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Action.m; path = Service/Action.m; sourceTree = "<group>"; };
+		76B393E31E4C17080097D8E6 /* Reducer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reducer.h; path = Service/Reducer.h; sourceTree = "<group>"; };
+		76B393E41E4C17080097D8E6 /* Reducer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reducer.m; path = Service/Reducer.m; sourceTree = "<group>"; };
+		76B393E61E4C17310097D8E6 /* Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Store.h; path = Service/Store.h; sourceTree = "<group>"; };
+		76B393E71E4C17310097D8E6 /* Store.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Store.m; path = Service/Store.m; sourceTree = "<group>"; };
+		76B393E91E4C17890097D8E6 /* State.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = State.h; path = Service/State.h; sourceTree = "<group>"; };
+		76B393EA1E4C17890097D8E6 /* State.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = State.m; path = Service/State.m; sourceTree = "<group>"; };
+		78190522FBE436CC3825CB17 /* libPods-ReduxObjc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReduxObjc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C022382172813217CA8E10AF /* Pods-ReduxObjc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReduxObjc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReduxObjc/Pods-ReduxObjc.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		76B393B11E4B2A5D0097D8E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				254D75F2064C27FE1A336273 /* libPods-ReduxObjc.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5E108A8E46FF991222AA6AC7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C022382172813217CA8E10AF /* Pods-ReduxObjc.debug.xcconfig */,
+				56AE752A03BEA9A2A1A37D94 /* Pods-ReduxObjc.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		76B393AB1E4B2A5D0097D8E6 = {
+			isa = PBXGroup;
+			children = (
+				76B393B61E4B2A5D0097D8E6 /* ReduxObjc */,
+				76B393B51E4B2A5D0097D8E6 /* Products */,
+				5E108A8E46FF991222AA6AC7 /* Pods */,
+				CEF14A2FB51050713EC60653 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		76B393B51E4B2A5D0097D8E6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				76B393B41E4B2A5D0097D8E6 /* ReduxObjc.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		76B393B61E4B2A5D0097D8E6 /* ReduxObjc */ = {
+			isa = PBXGroup;
+			children = (
+				76B393CE1E4B2A720097D8E6 /* Data */,
+				76B393D01E4B2A810097D8E6 /* Service */,
+				76B393CF1E4B2A7C0097D8E6 /* UI */,
+				76B393BA1E4B2A5D0097D8E6 /* AppDelegate.h */,
+				76B393BB1E4B2A5D0097D8E6 /* AppDelegate.m */,
+				76B393C31E4B2A5D0097D8E6 /* Assets.xcassets */,
+				76B393C51E4B2A5D0097D8E6 /* LaunchScreen.storyboard */,
+				76B393C81E4B2A5D0097D8E6 /* Info.plist */,
+				76B393B71E4B2A5D0097D8E6 /* Supporting Files */,
+			);
+			path = ReduxObjc;
+			sourceTree = "<group>";
+		};
+		76B393B71E4B2A5D0097D8E6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				76B393B81E4B2A5D0097D8E6 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		76B393CE1E4B2A720097D8E6 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				76B393DA1E4C04910097D8E6 /* NumberGenerator.h */,
+				76B393DB1E4C04910097D8E6 /* NumberGenerator.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		76B393CF1E4B2A7C0097D8E6 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				76B393D11E4B2BD20097D8E6 /* MainViewController.h */,
+				76B393D21E4B2BD20097D8E6 /* MainViewController.m */,
+				76B393D41E4B2D5F0097D8E6 /* MainViewModel.h */,
+				76B393D51E4B2D5F0097D8E6 /* MainViewModel.m */,
+				76B393D71E4B2D7C0097D8E6 /* MainTableViewItem.h */,
+				76B393D81E4B2D7C0097D8E6 /* MainTableViewItem.m */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		76B393D01E4B2A810097D8E6 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				76B393DD1E4C05460097D8E6 /* GeneratorManager.h */,
+				76B393DE1E4C05460097D8E6 /* GeneratorManager.m */,
+				76B393E01E4C156E0097D8E6 /* Action.h */,
+				76B393E11E4C156E0097D8E6 /* Action.m */,
+				76B393E91E4C17890097D8E6 /* State.h */,
+				76B393EA1E4C17890097D8E6 /* State.m */,
+				76B393E31E4C17080097D8E6 /* Reducer.h */,
+				76B393E41E4C17080097D8E6 /* Reducer.m */,
+				76B393E61E4C17310097D8E6 /* Store.h */,
+				76B393E71E4C17310097D8E6 /* Store.m */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		CEF14A2FB51050713EC60653 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				78190522FBE436CC3825CB17 /* libPods-ReduxObjc.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		76B393B31E4B2A5D0097D8E6 /* ReduxObjc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76B393CB1E4B2A5D0097D8E6 /* Build configuration list for PBXNativeTarget "ReduxObjc" */;
+			buildPhases = (
+				952977A5E14BBADFFFBC8CA7 /* [CP] Check Pods Manifest.lock */,
+				76B393B01E4B2A5D0097D8E6 /* Sources */,
+				76B393B11E4B2A5D0097D8E6 /* Frameworks */,
+				76B393B21E4B2A5D0097D8E6 /* Resources */,
+				E596ED02A37D78AE7738983D /* [CP] Embed Pods Frameworks */,
+				FF9AE712BBE4E5ECF1EDCE33 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReduxObjc;
+			productName = ReduxObjc;
+			productReference = 76B393B41E4B2A5D0097D8E6 /* ReduxObjc.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		76B393AC1E4B2A5D0097D8E6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Mitsuha;
+				TargetAttributes = {
+					76B393B31E4B2A5D0097D8E6 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = ARTH5X7FEM;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 76B393AF1E4B2A5D0097D8E6 /* Build configuration list for PBXProject "ReduxObjc" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 76B393AB1E4B2A5D0097D8E6;
+			productRefGroup = 76B393B51E4B2A5D0097D8E6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				76B393B31E4B2A5D0097D8E6 /* ReduxObjc */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		76B393B21E4B2A5D0097D8E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76B393C71E4B2A5D0097D8E6 /* LaunchScreen.storyboard in Resources */,
+				76B393C41E4B2A5D0097D8E6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		952977A5E14BBADFFFBC8CA7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E596ED02A37D78AE7738983D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReduxObjc/Pods-ReduxObjc-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF9AE712BBE4E5ECF1EDCE33 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReduxObjc/Pods-ReduxObjc-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		76B393B01E4B2A5D0097D8E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76B393DC1E4C04910097D8E6 /* NumberGenerator.m in Sources */,
+				76B393E21E4C156E0097D8E6 /* Action.m in Sources */,
+				76B393BC1E4B2A5D0097D8E6 /* AppDelegate.m in Sources */,
+				76B393EB1E4C17890097D8E6 /* State.m in Sources */,
+				76B393E81E4C17310097D8E6 /* Store.m in Sources */,
+				76B393D31E4B2BD20097D8E6 /* MainViewController.m in Sources */,
+				76B393B91E4B2A5D0097D8E6 /* main.m in Sources */,
+				76B393D61E4B2D5F0097D8E6 /* MainViewModel.m in Sources */,
+				76B393DF1E4C05460097D8E6 /* GeneratorManager.m in Sources */,
+				76B393D91E4B2D7C0097D8E6 /* MainTableViewItem.m in Sources */,
+				76B393E51E4C17080097D8E6 /* Reducer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		76B393C51E4B2A5D0097D8E6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				76B393C61E4B2A5D0097D8E6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		76B393C91E4B2A5D0097D8E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		76B393CA1E4B2A5D0097D8E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		76B393CC1E4B2A5D0097D8E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C022382172813217CA8E10AF /* Pods-ReduxObjc.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ARTH5X7FEM;
+				INFOPLIST_FILE = ReduxObjc/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Mitsuha.ReduxObjc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		76B393CD1E4B2A5D0097D8E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56AE752A03BEA9A2A1A37D94 /* Pods-ReduxObjc.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ARTH5X7FEM;
+				INFOPLIST_FILE = ReduxObjc/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Mitsuha.ReduxObjc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		76B393AF1E4B2A5D0097D8E6 /* Build configuration list for PBXProject "ReduxObjc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76B393C91E4B2A5D0097D8E6 /* Debug */,
+				76B393CA1E4B2A5D0097D8E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		76B393CB1E4B2A5D0097D8E6 /* Build configuration list for PBXNativeTarget "ReduxObjc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76B393CC1E4B2A5D0097D8E6 /* Debug */,
+				76B393CD1E4B2A5D0097D8E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 76B393AC1E4B2A5D0097D8E6 /* Project object */;
+}
