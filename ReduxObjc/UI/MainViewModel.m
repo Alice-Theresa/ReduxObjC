@@ -12,6 +12,7 @@
 #import "MainTableViewItem.h"
 
 #import "Store.h"
+#import "OperateManager.h"
 #import "GeneratorManager.h"
 
 @interface MainViewModel ()
@@ -46,10 +47,28 @@
 - (RACCommand *)refreshCommand {
     if (!_refreshCommand) {
         _refreshCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
-            return [[GeneratorManager sharedManager] fetchNumber];
+            return [[GeneratorManager sharedManager] fetchNumbers];
         }];
     }
     return _refreshCommand;
+}
+
+- (RACCommand *)addCommand {
+    if (!_addCommand) {
+        _addCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+            return [[OperateManager sharedManager] addNumber];
+        }];
+    }
+    return _addCommand;
+}
+
+- (RACCommand *)deleteCommand {
+    if (!_deleteCommand) {
+        _deleteCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+            return [[OperateManager sharedManager] deleteNumberAtIndex:input];
+        }];
+    }
+    return _deleteCommand;
 }
 
 @end

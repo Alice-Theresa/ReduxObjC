@@ -21,6 +21,7 @@
 		76B393E51E4C17080097D8E6 /* Reducer.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B393E41E4C17080097D8E6 /* Reducer.m */; };
 		76B393E81E4C17310097D8E6 /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B393E71E4C17310097D8E6 /* Store.m */; };
 		76B393EB1E4C17890097D8E6 /* State.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B393EA1E4C17890097D8E6 /* State.m */; };
+		76B394071E4D52480097D8E6 /* OperateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B394061E4D52480097D8E6 /* OperateManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,8 @@
 		76B393E71E4C17310097D8E6 /* Store.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Store.m; path = Service/Store.m; sourceTree = "<group>"; };
 		76B393E91E4C17890097D8E6 /* State.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = State.h; path = Service/State.h; sourceTree = "<group>"; };
 		76B393EA1E4C17890097D8E6 /* State.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = State.m; path = Service/State.m; sourceTree = "<group>"; };
+		76B394051E4D52480097D8E6 /* OperateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OperateManager.h; path = Service/OperateManager.h; sourceTree = "<group>"; };
+		76B394061E4D52480097D8E6 /* OperateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OperateManager.m; path = Service/OperateManager.m; sourceTree = "<group>"; };
 		78190522FBE436CC3825CB17 /* libPods-ReduxObjc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReduxObjc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C022382172813217CA8E10AF /* Pods-ReduxObjc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReduxObjc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReduxObjc/Pods-ReduxObjc.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -144,6 +147,8 @@
 			children = (
 				76B393DD1E4C05460097D8E6 /* GeneratorManager.h */,
 				76B393DE1E4C05460097D8E6 /* GeneratorManager.m */,
+				76B394051E4D52480097D8E6 /* OperateManager.h */,
+				76B394061E4D52480097D8E6 /* OperateManager.m */,
 				76B393E01E4C156E0097D8E6 /* Action.h */,
 				76B393E11E4C156E0097D8E6 /* Action.m */,
 				76B393E91E4C17890097D8E6 /* State.h */,
@@ -296,6 +301,7 @@
 				76B393D61E4B2D5F0097D8E6 /* MainViewModel.m in Sources */,
 				76B393DF1E4C05460097D8E6 /* GeneratorManager.m in Sources */,
 				76B393D91E4B2D7C0097D8E6 /* MainTableViewItem.m in Sources */,
+				76B394071E4D52480097D8E6 /* OperateManager.m in Sources */,
 				76B393E51E4C17080097D8E6 /* Reducer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

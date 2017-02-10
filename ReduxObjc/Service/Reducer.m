@@ -24,6 +24,29 @@
                 newState.numberArray = action.payload;
                 break;
                 
+            case ActionTypeAddNumber: {
+                NSMutableArray *temp;
+                if (newState.numberArray) {
+                    temp = [newState.numberArray mutableCopy];
+                } else {
+                    temp = [NSMutableArray array];
+                }
+                [temp insertObject:action.payload atIndex:0];
+                newState.numberArray = [temp copy];
+                break;
+            }
+                
+            case ActionTypeDeleteNumber: {
+                NSMutableArray *temp;
+                if (newState.numberArray) {
+                    temp = [newState.numberArray mutableCopy];
+                    NSNumber *index = action.payload;
+                    [temp removeObjectAtIndex:index.integerValue];
+                    newState.numberArray = [temp copy];
+                }
+                break;
+            }
+                
             default:
                 break;
         }

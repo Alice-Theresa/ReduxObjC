@@ -10,6 +10,7 @@
 
 @interface NumberGenerator : NSObject
 
-+ (RACSignal *)randomNumber;
++ (RACSignal *)multiRandomNumbers;
++ (RACSignal *)singleRandomNumber;
 
 @end

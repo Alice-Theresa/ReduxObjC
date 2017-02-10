@@ -9,7 +9,9 @@
 #import <Foundation/Foundation.h>
 
 typedef NS_ENUM(NSInteger, ActionType) {
-    ActionTypeFetchNumber = 0
+    ActionTypeFetchNumber = 0,
+    ActionTypeAddNumber,
+    ActionTypeDeleteNumber
 };
 
 @interface Action : NSObject

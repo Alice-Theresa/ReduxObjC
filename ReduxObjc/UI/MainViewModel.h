@@ -16,5 +16,7 @@
 @property (nonatomic, copy, readonly) NSArray<MainTableViewItem *> *items;
 
 @property (nonatomic, strong) RACCommand *refreshCommand;
+@property (nonatomic, strong) RACCommand *addCommand;
+@property (nonatomic, strong) RACCommand *deleteCommand;
 
 @end

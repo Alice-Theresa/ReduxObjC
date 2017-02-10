@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '2BE84A7AE4F866B5D4D1441B48A1DD5F'
+               BlueprintIdentifier = '6B319D0757049BBEDDBD7B1EB360036F'
                BlueprintName = 'Pods-ReduxObjc'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-ReduxObjc.a'>

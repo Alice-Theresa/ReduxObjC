@@ -12,6 +12,6 @@
 
 + (instancetype)sharedManager;
 
-- (RACSignal *)fetchNumber;
+- (RACSignal *)fetchNumbers;
 
 @end
