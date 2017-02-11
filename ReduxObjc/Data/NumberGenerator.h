@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class RACSignal;
+
 @interface NumberGenerator : NSObject
 
 + (RACSignal *)multiRandomNumbers;

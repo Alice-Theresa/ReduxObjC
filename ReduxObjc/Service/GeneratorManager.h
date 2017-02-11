@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class RACSignal;
+
 @interface GeneratorManager : NSObject
 
 + (instancetype)sharedManager;

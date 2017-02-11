@@ -13,16 +13,18 @@
 @implementation Reducer
 
 + (NSArray *)reducerBlocks {
-    return @[ [self generateActionReducer] ];
+    return @[ [self actionReducer] ];
 }
 
-+ (ReducerBlock)generateActionReducer {
++ (ReducerBlock)actionReducer {
     ReducerBlock block = ^(State **state, Action *action) {
         State *newState = *state;
         switch (action.type) {
-            case ActionTypeFetchNumber:
+                
+            case ActionTypeFetchNumber: {
                 newState.numberArray = action.payload;
                 break;
+            }
                 
             case ActionTypeAddNumber: {
                 NSMutableArray *temp;
