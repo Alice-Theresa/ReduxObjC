@@ -4,14 +4,14 @@ Keyword: iOS, Objective-C, MVVM, RAC, Redux
 
 ##源
 
-![Picture1.JPG](./Picture/Picture1.jpg)
+![Picture1.png](./Picture/Picture1.png)
 
 在这个架构中，UI层采用MVVM模式，Service层负责处理业务逻辑，Data层负责底层的网络请求等业务。
 Service层中有多个Manager，每个Manager负责不同类型的业务逻辑，同时也会存储一些状态、数据。
 Manager之间也会相互调用，以及访问各自的数据。
 随着业务内容的不断增加，Manager之间的关系也会变得越来越复杂，数据的相互调用很容易发生错误。
 
-![Picture2.JPG](./Picture/Picture2.jpg)
+![Picture2.png](./Picture/Picture2.png)
 
 理想的情况是将Manager中的业务逻辑与数据分离，这样即使Manager之间的关系有多么地复杂，也能够保证数据的高度独立性，不容易出现问题。
 
@@ -21,7 +21,7 @@ Manager之间也会相互调用，以及访问各自的数据。
 
 在Swift语言中有ReSwift这样一个框架，它将Redux的思想应用到了iOS开发中。
 
-![Picture3.JPG](./Picture/Picture3.jpg)
+![Picture3.png](./Picture/Picture3.png)
 
 上图为ReSwift的主要架构
 
@@ -33,7 +33,7 @@ Manager之间也会相互调用，以及访问各自的数据。
 
 ##改
 
-![Picture4.JPG](./Picture/Picture4.jpg)
+![Picture4.png](./Picture/Picture4.png)
 
 将ReSwift的View换成Manager，利用Redux的思想，我们可以将Manager中原有的业务逻辑与数据分离。
 Manager只负责逻辑业务，如何储存数据以及如何操作数据则全部交由Store去处理。
