@@ -28,11 +28,7 @@
                 
             case ActionTypeAddNumber: {
                 NSMutableArray *temp;
-                if (newState.numberArray) {
-                    temp = [newState.numberArray mutableCopy];
-                } else {
-                    temp = [NSMutableArray array];
-                }
+                temp = newState.numberArray ? [newState.numberArray mutableCopy] : [NSMutableArray array];
                 [temp insertObject:action.payload atIndex:0];
                 newState.numberArray = [temp copy];
                 break;

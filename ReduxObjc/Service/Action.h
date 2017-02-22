@@ -14,11 +14,15 @@ typedef NS_ENUM(NSInteger, ActionType) {
     ActionTypeDeleteNumber
 };
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface Action : NSObject
 
 @property (nonatomic, assign, readonly) ActionType type;
 @property (nonatomic, strong, readonly, nullable) id payload;
 
-- (nonnull instancetype)initWithActionType:(ActionType)type payload:(nullable id)payload;
+- (instancetype)initWithActionType:(ActionType)type payload:(nullable id)payload;
 
 @end
+
+NS_ASSUME_NONNULL_END

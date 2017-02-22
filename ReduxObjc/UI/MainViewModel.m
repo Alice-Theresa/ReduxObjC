@@ -11,6 +11,7 @@
 #import "MainViewModel.h"
 #import "MainTableViewItem.h"
 
+#import "State.h"
 #import "Store.h"
 #import "OperateManager.h"
 #import "GeneratorManager.h"
@@ -32,10 +33,10 @@
 
 - (void)buildSection {
     @weakify(self)
-    [[Store sharedInstance].arrayState subscribeNext:^(id x) {
+    [[Store sharedInstance].stateSignal subscribeNext:^(State *state) {
         @strongify(self)
         NSMutableArray *temp = [NSMutableArray array];
-        for (NSNumber *num in x) {
+        for (NSNumber *num in state.numberArray) {
             MainTableViewItem *item = [[MainTableViewItem alloc] init];
             item.number = [NSString stringWithFormat:@"%@", num];
             [temp addObject:item];

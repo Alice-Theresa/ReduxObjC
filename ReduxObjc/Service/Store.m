@@ -15,7 +15,7 @@
 
 @interface Store ()
 
-@property (nonatomic, strong, readwrite) RACSignal *arrayState;
+@property (nonatomic, strong, readwrite) RACSignal *stateSignal;
 
 @property (nonatomic, strong) dispatch_queue_t serialQueue;
 @property (nonatomic, copy  ) NSArray<ReducerBlock> *reducers;
@@ -58,11 +58,15 @@
     return _state;
 }
 
-- (RACSignal *)arrayState {
-    if (!_arrayState) {
-        _arrayState = RACObserve(self, state.numberArray);
+- (RACSignal *)stateSignal {
+    if (!_stateSignal) {
+        _stateSignal = RACObserve(self, state);
     }
-    return _arrayState;
+    return _stateSignal;
+}
+
+- (State *)currentState {
+    return [self.state copy];
 }
 
 - (NSArray<ReducerBlock> *)reducers {

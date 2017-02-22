@@ -17,7 +17,7 @@
 
 @implementation Action
 
-- (nonnull instancetype)initWithActionType:(ActionType)type payload:(nullable id)payload {
+- (instancetype)initWithActionType:(ActionType)type payload:(nullable id)payload {
     if (self = [super init]) {
         _type = type;
         _payload = payload;
