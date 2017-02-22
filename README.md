@@ -110,7 +110,7 @@ NS_ASSUME_NONNULL_END
 @class State;
 @class Action;
 
-typedef void (^ReducerBlock)(State **state, Action *action);
+typedef void (^ReducerBlock)(State **, Action *);
 
 @interface Reducer : NSObject
 
