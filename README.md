@@ -7,8 +7,11 @@ Keyword: iOS, Objective-C, MVVM, RAC, Redux
 ![Picture1.png](./Picture/Picture1.png)
 
 在这个架构中，UI层采用MVVM模式，Service层负责处理业务逻辑，Data层负责底层的网络请求等业务。
+
 Service层中有多个Manager，每个Manager负责不同类型的业务逻辑，同时也会存储一些状态、数据。
+
 Manager之间也会相互调用，以及访问各自的数据。
+
 随着业务内容的不断增加，Manager之间的关系也会变得越来越复杂，数据的相互调用很容易发生错误。
 
 ![Picture2.png](./Picture/Picture2.png)
@@ -36,24 +39,30 @@ Manager之间也会相互调用，以及访问各自的数据。
 ![Picture4.png](./Picture/Picture4.png)
 
 将ReSwift的View换成Manager，利用Redux的思想，我们可以将Manager中原有的业务逻辑与数据分离。
+
 Manager只负责逻辑业务，如何储存数据以及如何操作数据则全部交由Store去处理。
 
 流程：
+
 1. 当Manager获取到数据或者数据需要改动的时候，会向Store发送一个Action，Action包含着对数据处理的方式以及数据本身（可空）。
+
 2. Store收到来自Manager的Action后，会连同自身存储的State一并交给Reducer，Reducer会根据Action中的操作方式来对数据进行处理。
+
 3. Store中的State被改变后，可以通过观察者模式来获取最新的数据。
 
 ##现
 
-#####Demo结构
+####Demo结构
 
 ![Picture5.png](./Picture/Picture5.png)
 
 Data层中的NumberGenerator负责生成随机数，模拟网络请求，返回数据。
+
 Service层中的GeneratorManager负责获取随机数，OperateManager负责对数据进行增删操作。
+
 UI层订阅Store中的数据，并将其显示给用户。
 
-#####Action
+####Action
 
 Action包含操作方式以及数据，其中数据可以为空。
 
@@ -79,7 +88,7 @@ NS_ASSUME_NONNULL_BEGIN
 NS_ASSUME_NONNULL_END
 ```
 
-#####State
+####State
 
 储存数据的载体。
 
@@ -92,7 +101,7 @@ NS_ASSUME_NONNULL_END
 @end
 ```
 
-#####Reducer
+####Reducer
 
 根据业务的复杂程度，Reducer可以有多个，Store将会在Reducer的集合中历遍，以寻找对应能跟操作State的方法。
 
@@ -157,7 +166,7 @@ typedef void (^ReducerBlock)(State **state, Action *action);
 @end
 ```
 
-#####Store
+####Store
 
 Store， 单例。
 - 拥有一条串行队列保证每一时刻只有一个Action在执行。
@@ -256,5 +265,7 @@ Reducer原有的定义为：
 
 ##终
 优点：逻辑数据分离，结构清晰，易于维护，保证数据安全。
+
 缺点：搭建略为麻烦，不适合小项目，吃内存，对性能有一定影响。
+
 对于一般简单的项目，并不需要使用这种方式来分离逻辑和数据，用了反而多此一举。但对于复杂的项目来说，值得一试。
