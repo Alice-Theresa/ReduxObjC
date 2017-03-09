@@ -173,9 +173,7 @@ Store， 单例。
 - dispatch方法会把Action分发给Reducer。
 - 分配任务给Reducer的时候，将会把当前的State复制一份，并将拷贝结果的地址作为参数传入，让Reducer直接在该地址上对数据进行操作，以提高性能。
 
-(*注)
-
-Reducer原有的定义为：
+注意，Reducer原有的定义为：
 `(previousState, action) => newState`
 传入旧的State，创建并返回新的State。
 
