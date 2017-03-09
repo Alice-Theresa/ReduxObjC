@@ -171,15 +171,15 @@ typedef void (^ReducerBlock)(State **, Action *);
 Store， 单例。
 - 拥有一条串行队列保证每一时刻只有一个Action在执行。
 - dispatch方法会把Action分发给Reducer。
-- 分配任务给Reducer的时候，将会把当前的State复制一份，并将拷贝结果的地址作为参数传入，让Reducer直接在该地址上对数据进行操作，以提高性能。(*注)
+- 分配任务给Reducer的时候，将会把当前的State复制一份，并将拷贝结果的地址作为参数传入，让Reducer直接在该地址上对数据进行操作，以提高性能。
 
+(*注)
 Reducer原有的定义为：
 `(previousState, action) => newState`
 传入旧的State，创建并返回新的State。
 
 `Store.h`
 ```objectivec
-@class State;
 @class Action;
 @class RACSignal;
 
