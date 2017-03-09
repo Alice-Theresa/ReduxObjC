@@ -27,7 +27,7 @@
 
 - (RACSignal *)fetchNumbers {
     return [[NumberGenerator multiRandomNumbers] doNext:^(id x) {
-        Action *action = [[Action alloc] initWithActionType:ActionTypeFetchNumber payload:x];
+        Action *action = [Action type:ActionTypeFetchNumber payload:x];
         [[Store sharedInstance] dispatchAction:action];
     }];
 }

@@ -27,14 +27,14 @@
 
 - (RACSignal *)addNumber {
     return [[NumberGenerator singleRandomNumber] doNext:^(id x) {
-        Action *action = [[Action alloc] initWithActionType:ActionTypeAddNumber payload:x];
+        Action *action = [Action type:ActionTypeAddNumber payload:x];
         [[Store sharedInstance] dispatchAction:action];
     }];
 }
 
 - (RACSignal *)deleteNumberAtIndex:(NSNumber *)index {
     RACSignal *signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        Action *action = [[Action alloc] initWithActionType:ActionTypeDeleteNumber payload:index];
+        Action *action = [Action type:ActionTypeDeleteNumber payload:index];
         [[Store sharedInstance] dispatchAction:action];
         [subscriber sendCompleted];
         return nil;

@@ -17,6 +17,10 @@
 
 @implementation Action
 
++ (instancetype)type:(ActionType)type payload:(id)payload {
+    return [[self alloc] initWithActionType:type payload:payload];
+}
+
 - (instancetype)initWithActionType:(ActionType)type payload:(nullable id)payload {
     if (self = [super init]) {
         _type = type;

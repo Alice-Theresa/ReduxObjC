@@ -51,6 +51,8 @@
     });
 }
 
+#pragma mark - Lazy Loading
+
 - (State *)state {
     if (!_state) {
         _state = [[State alloc] init];
@@ -63,10 +65,6 @@
         _stateSignal = RACObserve(self, state);
     }
     return _stateSignal;
-}
-
-- (State *)currentState {
-    return [self.state copy];
 }
 
 - (NSArray<ReducerBlock> *)reducers {

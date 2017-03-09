@@ -78,10 +78,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Action : NSObject
 
++ (instancetype)type:(ActionType)type payload:(nullable id)payload;
+
 @property (nonatomic, assign, readonly) ActionType type;
 @property (nonatomic, strong, readonly, nullable) id payload;
-
-- (instancetype)initWithActionType:(ActionType)type payload:(nullable id)payload;
 
 @end
 
@@ -170,6 +170,7 @@ typedef void (^ReducerBlock)(State **, Action *);
 
 Store， 单例。
 - 拥有一条串行队列保证每一时刻只有一个Action在执行。
+- dispatch方法会把Action分发给Reducer。
 - 分配任务给Reducer的时候，将会把当前的State复制一份，并将拷贝结果的地址作为参数传入，让Reducer直接在该地址上对数据进行操作，以提高性能。(*注)
 
 Reducer原有的定义为：
@@ -184,13 +185,11 @@ Reducer原有的定义为：
 
 @interface Store : NSObject
 
-@property (nonatomic, strong, readonly) RACSignal *stateSignal;
-
 + (instancetype)sharedInstance;
 
-- (void)dispatchAction:(Action *)action;
+@property (nonatomic, strong, readonly) RACSignal *stateSignal;
 
-- (State *)currentState;
+- (void)dispatchAction:(Action *)action;
 
 @end
 ```
@@ -235,6 +234,8 @@ Reducer原有的定义为：
     });
 }
 
+#pragma mark - Lazy Loading
+
 - (State *)state {
     if (!_state) {
         _state = [[State alloc] init];
@@ -249,10 +250,6 @@ Reducer原有的定义为：
     return _stateSignal;
 }
 
-- (State *)currentState {
-    return [self.state copy];
-}
-
 - (NSArray<ReducerBlock> *)reducers {
     if (!_reducers) {
         _reducers = [Reducer reducerBlocks];
@@ -263,9 +260,35 @@ Reducer原有的定义为：
 @end
 ```
 
+以下为RAC版本
+
+```objectivec
+- (RACScheduler *)scheduler {
+    if (!_scheduler) {
+        _scheduler = [[RACTargetQueueScheduler alloc] initWithName:@"ReduxObjc" targetQueue:self.serialQueue];
+    }
+    return _scheduler;
+}
+```
+
+```objectivec
+- (RACSignal *)dispatchSignal:(Action *)action {
+    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        return [self.scheduler schedule:^{
+            State *newState = [self.state copy];
+            for (ReducerBlock block in self.reducers) {
+                block(&newState, action);
+            }
+            self.state = newState;
+            [subscriber sendCompleted];
+        }];
+    }];
+}
+```
+
 ##终
 优点：逻辑数据分离，结构清晰，易于维护，保证数据安全。
 
-缺点：搭建略为麻烦，不适合小项目，吃内存，对性能有一定影响。
+缺点：搭建略为麻烦，不适合小项目，性能较差。
 
 对于一般简单的项目，并不需要使用这种方式来分离逻辑和数据，用了反而多此一举。但对于复杂的项目来说，值得一试。

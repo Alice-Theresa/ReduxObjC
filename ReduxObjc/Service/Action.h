@@ -18,10 +18,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Action : NSObject
 
++ (instancetype)type:(ActionType)type payload:(nullable id)payload;
+
 @property (nonatomic, assign, readonly) ActionType type;
 @property (nonatomic, strong, readonly, nullable) id payload;
-
-- (instancetype)initWithActionType:(ActionType)type payload:(nullable id)payload;
 
 @end
 

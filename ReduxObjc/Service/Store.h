@@ -14,12 +14,10 @@
 
 @interface Store : NSObject
 
-@property (nonatomic, strong, readonly) RACSignal *stateSignal;
-
 + (instancetype)sharedInstance;
 
-- (void)dispatchAction:(Action *)action;
+@property (nonatomic, strong, readonly) RACSignal *stateSignal;
 
-- (State *)currentState;
+- (void)dispatchAction:(Action *)action;
 
 @end
