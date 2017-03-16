@@ -1,8 +1,8 @@
-#Redux in ObjC - 食用指南
+# Redux in ObjC - 食用指南
 
 Keyword: iOS, Objective-C, MVVM, RAC, Redux
 
-##源
+## 源
 
 ![Picture1.png](./Picture/Picture1.png)
 
@@ -18,7 +18,7 @@ Manager之间也会相互调用，以及访问各自的数据。
 
 理想的情况是将Manager中的业务逻辑与数据分离，这样即使Manager之间的关系有多么地复杂，也能够保证数据的高度独立性，不容易出现问题。
 
-##引
+## 引
 
 说到Redux，就不得不提Flux。Flux是由Facebook开发、用于构建客户端Web应用的一个架构，它的核心理念是“让数据单向流动”。利用Flux，我们可以非常方便地来管理和控制数据的流向。而Redux，可以将其看作以Flux为基础的一个演进版本。
 
@@ -34,7 +34,7 @@ Manager之间也会相互调用，以及访问各自的数据。
 - State：实际上是一种数据结构，而且是只读的，唯一能改变它的地方在Reducer。
 - Reducer：负责更新State的地方
 
-##改
+## 改
 
 ![Picture4.png](./Picture/Picture4.png)
 
@@ -50,9 +50,9 @@ Manager只负责逻辑业务，如何储存数据以及如何操作数据则全�
 
 3. Store中的State被改变后，可以通过观察者模式来获取最新的数据。
 
-##现
+## 现
 
-####Demo结构
+#### Demo结构
 
 ![Picture5.png](./Picture/Picture5.png)
 
@@ -62,7 +62,7 @@ Service层中的GeneratorManager负责获取随机数，OperateManager负责对�
 
 UI层订阅Store中的数据，并将其显示给用户。
 
-####Action
+#### Action
 
 Action包含操作方式以及数据，其中数据可以为空。
 
@@ -88,7 +88,7 @@ NS_ASSUME_NONNULL_BEGIN
 NS_ASSUME_NONNULL_END
 ```
 
-####State
+#### State
 
 储存数据的载体。
 
@@ -101,7 +101,7 @@ NS_ASSUME_NONNULL_END
 @end
 ```
 
-####Reducer
+#### Reducer
 
 根据业务的复杂程度，Reducer可以有多个，Store将会在Reducer的集合中历遍，以寻找对应能跟操作State的方法。
 
@@ -166,7 +166,7 @@ typedef void (^ReducerBlock)(State **, Action *);
 @end
 ```
 
-####Store
+#### Store
 
 Store， 单例。
 - 拥有一条串行队列保证每一时刻只有一个Action在执行。
@@ -285,7 +285,7 @@ Store， 单例。
 }
 ```
 
-##终
+## 终
 优点：逻辑数据分离，结构清晰，易于维护，保证数据安全。
 
 缺点：搭建略为麻烦，不适合小项目，性能较差。
